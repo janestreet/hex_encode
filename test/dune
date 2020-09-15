@@ -1,0 +1,5 @@
+(alias (name runtest) (deps test_runner.exe)
+ (action (bash ./test_runner.exe)))
+
+(executables (names test_runner) (libraries core_kernel hex_encode oUnit)
+ (preprocess (pps ppx_jane -allow-unannotated-ignores)))
