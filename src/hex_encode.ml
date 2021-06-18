@@ -1,6 +1,6 @@
 (** hex string operations *)
 
-open Core_kernel
+open Core
 
 let to_hex ?(case=`Uppercase) digest =
   let result = Bytes.create (String.length digest * 2) in

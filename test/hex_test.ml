@@ -1,5 +1,5 @@
 open OUnit
-open Core_kernel
+open Core
 open Poly
 
 module Hex = Hex_encode
