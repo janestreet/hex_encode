@@ -1,5 +1,3 @@
 open OUnit
 
-let all = TestList [
-  Hex_test.test;
-]
+let all = TestList [ Hex_test.test ]
