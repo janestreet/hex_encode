@@ -1,12 +1,5 @@
-(rule
- (alias runtest)
- (deps test_runner.exe)
- (action
-  (bash ./test_runner.exe)))
-
-(executables
- (modes byte exe)
- (names test_runner)
- (libraries core hex_encode oUnit)
+(library
+ (name test_hex_encode)
+ (libraries core expect_test_helpers_core hex_encode)
  (preprocess
   (pps ppx_jane)))
