@@ -18,11 +18,11 @@ let%expect_test "digit_char_p" =
   [%expect {| 3 |}];
   test (Hex.digit_char_p ~base:16 'a');
   [%expect {| 10 |}];
-  require_does_raise [%here] (fun () -> Hex.digit_char_p ~base:7 '7');
+  require_does_raise (fun () -> Hex.digit_char_p ~base:7 '7');
   [%expect {| (Invalid_argument "Hex.digit_char_p: '7' is not a digit in base 7") |}];
-  require_does_raise [%here] (fun () -> Hex.digit_char_p ~base:7 'a');
+  require_does_raise (fun () -> Hex.digit_char_p ~base:7 'a');
   [%expect {| (Invalid_argument "Hex.digit_char_p: 'a' is not a digit in base 7") |}];
-  require_does_raise [%here] (fun () -> Hex.digit_char_p ~base:77 'a');
+  require_does_raise (fun () -> Hex.digit_char_p ~base:77 'a');
   [%expect {| (Invalid_argument "Hex.digit_char_p(77,a): base must be from 0 to 36") |}]
 ;;
 
