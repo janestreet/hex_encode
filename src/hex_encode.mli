@@ -1,3 +1,5 @@
+@@ portable
+
 (** encode strings in hex, e.g., "abc" <--> "616263" *)
 
 (** encode string: "abc" --> "616263" *)
